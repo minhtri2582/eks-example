@@ -3,4 +3,5 @@ COPY static/ /var/www/html/
 RUN chown -R www-data:www-data /var/www/html
 RUN a2enmod rewrite
 EXPOSE 80
+USER www-data
 CMD ["apache2-foreground"]
